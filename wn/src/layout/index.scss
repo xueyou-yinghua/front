@@ -1,0 +1,19 @@
+@import "./font/one";
+
+*{
+  @include font-basics;
+  @include font-random-1;
+  margin: 0;
+  padding: 0;
+}
+
+body,html{
+  height: 100%;
+  width: 100%;
+}
+
+#sk{
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}

@@ -1,0 +1,20 @@
+$page:300px,768px,1024px,1600px,1920px,2560px,3140px;
+$length:length($page);
+
+@mixin font-basics{
+  font:{
+    family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    size: 16px;
+  }
+}
+
+@mixin font-random-1{
+  $font_size:16px,19px,20px,22px,23px,25px,27px;
+  $i:1;
+  @while $i <= $length{
+    @media screen and (min-width: nth($page,$i)) {
+      font-size: nth($font_size,$i);
+    }
+    $i:$i+1;
+  }
+}
