@@ -6,7 +6,6 @@ import HomeHead from "./homeHead.vue";
 
 <template>
   <HomeHead/>
-  <el-divider />
-  <homepage v-if="isBoolJudge($route.path === '/'||$route.path === '/home')"/>
-  <router-view v-else/>
+  <homepage v-if="isBoolJudge($route.path === '/'||$route.path === '/home')" class="sk-main-width sk-top-head"/>
+  <router-view v-else class="sk-main-width sk-top-head"/>
 </template>
