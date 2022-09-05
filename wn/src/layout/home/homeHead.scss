@@ -54,10 +54,41 @@
   }
 }
 
+//登录注册
+.sk-home-lr{
+  &.sk-main-li{
+    padding: 0 30px 0 100px;
+  }
+  a{
+    padding: 0 10px;
+  }
+}
+
 //下划线
 .sk-home-underline{
   position:absolute;
   bottom:0;
   height:2px;
   background: #409eff;
+
+  transition: width .3s,left .4s ease-in-out;
+}
+
+.sk-home-nav-small{
+  height: 100%;
+  width: 60px;
+  padding: 0 20px 0 0;
+  .el-button{
+    height: 100%;
+    width: 100%;
+    border: none;
+  }
+  .el-icon{
+    height: 100%;
+    width: 100%;
+    svg{
+      height: 100%;
+      width: 100%;
+    }
+  }
 }

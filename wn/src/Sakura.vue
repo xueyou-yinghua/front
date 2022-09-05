@@ -12,6 +12,7 @@ const update = () =>{
 }
 
 onMounted(()=>{
+  update();
   window.addEventListener('resize', update);
 });
 

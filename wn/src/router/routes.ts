@@ -23,10 +23,29 @@ const home:RouteRecordRaw = {
 const lr:RouteRecordRaw = {
 	path:'/lr',
 	name:'lr',
+	redirect:'/lr/login',
 	meta:{
-		name:'登录'
+		name:'...加载中'
 	},
 	component:()=>import('../views/login/uIndex.vue'),
+	children:[
+		{
+			path:'login',
+			name:'login',
+			meta:{
+				name:'登录'
+			},
+			component:()=>import('../views/login/login.vue'),
+		},
+		{
+			path:'register',
+			name:'register',
+			meta:{
+				name:'注册'
+			},
+			component:()=>import('../views/register/register.vue'),
+		},
+	]
 };
 const notFound:RouteRecordRaw = {
 	name:'NotFound',
