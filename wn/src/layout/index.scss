@@ -10,12 +10,24 @@
 body,html{
   height: 100%;
   width: 100%;
+  user-select: none;
 }
 
 #sk{
   height: 100%;
   overflow: hidden;
   position: relative;
+  .el-scrollbar__wrap{
+    display: flex;
+    flex-direction: column;
+  }
+  .el-scrollbar__view{
+    flex-grow: 1;
+  }
+
+  .el-scrollbar__bar{
+    z-index: 100;
+  }
 }
 
-@import "./home/homeHead","./page/width",'./page/list';
+@import "./home/homeHead","./page/width",'./page/list', 'lr/cIndex';

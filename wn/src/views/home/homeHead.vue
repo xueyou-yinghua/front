@@ -4,8 +4,9 @@ import {useRoute, useRouter} from "vue-router";
 import {useStore} from "vuex";
 //@ts-ignore
 import {Fold} from '@element-plus/icons-vue'
+import {skStore} from "../../setup/lib/store";
 
-
+const {isWidth} = skStore();
 const router = useRouter();
 const route = useRoute();
 const store = useStore();
@@ -91,7 +92,7 @@ function cancelClick() {
           </li>
         </ul>
       </div>
-      <div class="sk-home-underline" :style="underline" v-if="store.state.width>=800"/>
+      <div class="sk-home-underline" :style="underline" v-if="isWidth"/>
 
       <div class="sk-home-nav-small" v-else>
         <el-button :icon="Fold" @click="drawer = true"/>
